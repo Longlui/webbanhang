@@ -18,7 +18,7 @@ app.use('/api/categories', categoriesRoute);
 app.use('/api/orders', ordersRoute);
 
 // ===== Frontend tĩnh (index.html, cart.html, css/, js/) =====
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(__dirname));
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
