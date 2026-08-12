@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chi tiết sản phẩm - LongStore</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="top-header">
+
+        <a href="index.html" class="logo">
+            Long <span>Store</span>
+        </a>
+
+        <div class="search">
+            <input
+                type="text"
+                placeholder="Bạn tìm gì..."
+            >
+            <button>🔍</button>
+        </div>
+
+        <div
+            class="header-item cart"
+            onclick="goToCart()"
+        >
+            🛒
+            <span id="cartCount">0</span>
+            <span>Giỏ hàng</span>
+        </div>
+
+        <div
+            class="header-item"
+            onclick="window.location.href='index.html'"
+        >
+            🏠
+            <span>Trang chủ</span>
+        </div>
+
+    </div>
+
+</header>
+
+
+<main class="product-page">
+
+    <div id="productDetail">
+        <!-- Chi tiết sản phẩm sẽ được JavaScript hiển thị ở đây -->
+        <p class="loading-text">Đang tải sản phẩm...</p>
+    </div>
+
+</main>
+
+
+<script src="js/product.js"></script>
+
+</body>
+
+</html>

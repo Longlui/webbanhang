@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Giỏ hàng - ShopTech</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="top-header">
+
+       <a href="index.html" class="logo">
+            Long <span>Store</span>
+        </a>
+
+        <div class="search">
+            <input
+                type="text"
+                placeholder="Bạn tìm gì..."
+            >
+            <button>🔍</button>
+        </div>
+
+        <div
+            class="header-item cart"
+            onclick="window.location.href='cart.html'"
+        >
+            🛒
+            <span id="cartCount">0</span>
+            <span>Giỏ hàng</span>
+        </div>
+
+        <div
+            class="header-item"
+            onclick="window.location.href='index.html'"
+        >
+            🏠
+            <span>Trang chủ</span>
+        </div>
+
+    </div>
+
+</header>
+
+
+<main class="cart-page">
+
+    <h2>Giỏ hàng của bạn</h2>
+
+
+    <div id="cartContainer">
+
+        <!-- Sản phẩm sẽ được JavaScript hiển thị ở đây -->
+
+    </div>
+
+
+    <div class="checkout-box">
+
+        <h3>Thông tin giao hàng</h3>
+
+        <div class="checkout-form">
+
+            <input
+                id="fullName"
+                type="text"
+                placeholder="Họ và tên"
+            >
+
+            <input
+                id="phone"
+                type="tel"
+                placeholder="Số điện thoại"
+            >
+
+            <textarea
+                id="address"
+                placeholder="Địa chỉ giao hàng"
+                rows="2"
+            ></textarea>
+
+        </div>
+
+    </div>
+
+    <div class="cart-bottom">
+
+        <div>
+            Tổng tiền:
+            <strong id="totalPrice">
+                0đ
+            </strong>
+        </div>
+
+        <button
+            class="checkout-btn"
+            onclick="checkout()"
+        >
+            Thanh toán
+        </button>
+
+    </div>
+
+</main>
+
+
+<script src="js/cart.js"></script>
+
+</body>
+
+</html>
+

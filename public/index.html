@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LongStore - Thế giới công nghệ</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="top-header">
+
+        <a href="index.html" class="logo">
+            Long<span>Store</span>
+        </a>
+
+        <div class="search">
+            <input
+                id="searchInput"
+                type="text"
+                placeholder="Bạn tìm gì..."
+                onkeyup="searchProduct()"
+            >
+            <button>🔍</button>
+        </div>
+
+      <div class="header-item cart" onclick="goToCart()">🛒
+            <span id="cartCount">0</span>
+            <span>Giỏ hàng</span>
+        </div>
+
+        <div class="header-item">
+            👤
+            <span>Tài khoản</span>
+        </div>
+
+    </div>
+
+    <nav>
+        <a href="#" onclick="filterProduct('all'); return false;">Trang chủ</a>
+        <a href="#" onclick="filterProduct('phone'); return false;">Điện thoại</a>
+        <a href="#" onclick="filterProduct('laptop'); return false;">Laptop</a>
+        <a href="#" onclick="filterProduct('tablet'); return false;">Tablet</a>
+        <a href="#" onclick="filterProduct('accessory'); return false;">Phụ kiện</a>
+        <a href="#" onclick="filterProduct('watch'); return false;">Đồng hồ</a>
+    </nav>
+</header>
+
+
+<main>
+
+    <!-- BANNER -->
+    <section class="banner">
+        <div class="banner-content">
+            <h1>SIÊU SALE CÔNG NGHỆ</h1>
+            <p>Giảm đến 50% hàng loạt sản phẩm</p>
+            <button>Mua ngay</button>
+        </div>
+    </section>
+
+
+    <!-- DANH MỤC -->
+
+<section class="category">
+
+    <h2>Danh mục sản phẩm</h2>
+
+    <div class="category-list">
+
+        <a href="#" onclick="filterProduct('phone'); return false;" class="category-item">
+            <img src="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&w=300&q=80" alt="Điện thoại">
+            <p>Điện thoại</p>
+        </a>
+
+        <a href="#" onclick="filterProduct('laptop'); return false;" class="category-item">
+            <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=300&q=80" alt="Laptop">
+            <p>Laptop</p>
+        </a>
+
+        <a href="#" onclick="filterProduct('tablet'); return false;" class="category-item">
+            <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=300&q=80" alt="Tablet">
+            <p>Tablet</p>
+        </a>
+
+        <a href="#" onclick="filterProduct('accessory'); return false;" class="category-item">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=300&q=80" alt="Phụ kiện">
+            <p>Phụ kiện</p>
+        </a>
+
+        <a href="#" onclick="filterProduct('watch'); return false;" class="category-item">
+            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=300&q=80" alt="Đồng hồ">
+            <p>Đồng hồ</p>
+        </a>
+
+    </div>
+
+</section>
+
+<div class="price-filter">
+
+    <h3>Lọc theo giá</h3>
+
+    <button onclick="filterPrice('all')">
+        Tất cả
+    </button>
+
+    <button onclick="filterPrice('under5')">
+        Dưới 5 triệu
+    </button>
+
+    <button onclick="filterPrice('5to10')">
+        5 - 10 triệu
+    </button>
+
+    <button onclick="filterPrice('10to20')">
+        10 - 20 triệu
+    </button>
+
+    <button onclick="filterPrice('over20')">
+        Trên 20 triệu
+    </button>
+
+</div>
+
+
+    <!-- SẢN PHẨM -->
+    <section class="products">
+
+        <div class="section-title">
+
+            <h2 id="productTitle">
+                Tất cả sản phẩm
+            </h2>
+
+            <select id="sortPrice" onchange="sortProduct()">
+                <option value="default">
+                    Sắp xếp theo giá
+                </option>
+
+                <option value="low">
+                    Giá thấp → cao
+                </option>
+
+                <option value="high">
+                    Giá cao → thấp
+                </option>
+            </select>
+
+        </div>
+
+
+        <div
+            class="product-list"
+            id="productList">
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div class="footer-column">
+        <h3>Thông tin</h3>
+        <p>Giới thiệu</p>
+        <p>Chính sách bảo hành</p>
+        <p>Chính sách đổi trả</p>
+    </div>
+
+    <div class="footer-column">
+        <h3>Hỗ trợ</h3>
+        <p>Hotline: 0339566920</p>
+        <p>Hướng dẫn mua hàng</p>
+        <p>Thanh toán</p>
+    </div>
+
+    <div class="footer-column">
+        <h3>Kết nối</h3>
+        <p>Facebook</p>
+        <p>Youtube</p>
+        <p>Tiktok</p>
+    </div>
+
+</footer>
+
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
